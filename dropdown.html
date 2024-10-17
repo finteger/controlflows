@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<style>
+        	.dropBtn{
+            	background-color: green;
+                box-shadow: 2px 2px 5px black;
+                font-size: 16px;
+                color: #fff;
+                border-radius:5px;
+                border: 1px solid #eee;
+                padding: 5px;
+                cursor: pointer;
+            }
+            
+            .dropBtn:hover{
+            	background-color:lightblue;
+                color:black;
+            }
+            
+            .dropdown{
+            	position: relative;
+                display: inline-block;
+            }
+            .dropdown-content{
+            	display: none;
+            	position: absolute;
+                background-color: grey;
+                min-width: 160px;
+                overflow: auto;
+            }
+            .dropdown-content a{
+            	color: black;
+                padding: 12px 15px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover{
+            	background:yellow;
+            }
+            .show{
+            	display: block;
+            }
+        </style>
+    </head>
+    <body>
+    	<div class="dropdown">
+         	<button id="myBtn" class="dropBtn">Dropdown</button>
+       		<div id="myDropDown" class="dropdown-content">
+            	<a href="">Home</a>
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+                <a href="">Additional Info</a>
+            </div>
+        </div>
+    </body>
+    
+    <script>
+        //executes function on button click
+    	document.getElementById("myBtn").onclick = function (){  myFunction()};
+        
+        function myFunction(){
+        	document.getElementById("myDropDown").classList.toggle("show");
+        }
+    </script>
+    
+</html>
