@@ -1,0 +1,18 @@
+<p>forEach() calls a function for each element in an array:</p>
+
+<p id="demo"></p>
+
+<script>
+  	let text = "";
+    const fruits = ["apples", "oranges", "cheeries"];
+    
+    fruits.forEach(myFunction);
+    
+    
+    document.getElementById("demo").innerHTML = text;
+    
+    function myFunction(item, index){
+    	text += index + ": " + item + "<br />"
+    }
+    
+</script>
